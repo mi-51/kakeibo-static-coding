@@ -1,0 +1,430 @@
+@use "../global" as g;
+@use "../foundation/mixin" as m;
+.p-form {
+  * {
+    font-size: 1.6rem;
+  }
+
+  //各formスタイリング===================
+  //フォーム全体を左右中央にするレイアウト
+  &--center {
+    text-align: center;
+  }
+
+  //日付フィルターフォームレイアウト
+  &--date-search {
+    label[for="date-search"] {
+      vertical-align: middle;
+      @include m.mq(sp) {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      input {
+        @include m.mq(sp) {
+          max-width: 12rem;
+          font-size: 1.4rem;
+        }
+      }
+      input[type="date"] {
+        @include m.mq(sp) {
+          padding: 0.5rem 1rem;
+          min-width: 12rem;
+          min-height: 3.4rem;
+        }
+      }
+    }
+    .c-button {
+      border-radius: 0.5rem;
+      border: none;
+      padding: 0.3rem 1.2rem;
+      margin-right: 0.5rem;
+      @media screen and (max-width: 601px) {
+        width: 80%;
+        max-width: 35rem;
+        display: block;
+        margin: 1.6rem auto;
+        padding: 0.8rem 0;
+        color: #333;
+      }
+    }
+  }
+
+  //ホームデータ入力フォームレイアウト
+  &--input-record {
+    > div {
+      margin: 2rem 0;
+      @include m.mq(sp) {
+        margin: 2.4rem 0;
+      }
+      label[for="date"] {
+        @include m.mq(sp) {
+          width: 100%;
+        }
+      }
+      input[type="text"],
+      input[type="date"],
+      input[type="number"],
+      select {
+        width: 21rem;
+        padding: 0.3rem;
+        border: solid 0.1rem #333;
+        border-radius: 0.3rem;
+        color: #333;
+        background-color: #fff;
+        text-align: left;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      input[type="number"] {
+        @include m.mq(sp) {
+          width: 100%;
+          padding: 0.5rem.3rem;
+        }
+      }
+      //支出収入のラジオボタン
+      &:nth-of-type(4) {
+        label {
+          width: 15rem;
+          text-align: center;
+          background-color: #fff;
+          border: solid 0.15rem g.$main-blue;
+          color: g.$main-blue;
+          border-radius: 0.7rem;
+          padding: 1rem 0;
+          letter-spacing: 0.7rem;
+          @include m.mq(sp) {
+            width: 50%;
+          }
+        }
+        input[type="radio"] {
+          display: none;
+          @include m.mq(sp) {
+          }
+          //選択状態にあるときのレイアウト
+          &:checked + label {
+            background-color: g.$main-blue;
+            color: #fff;
+          }
+        }
+      }
+    }
+    //カテゴリー選択以下のスマホ用レイアウト
+    .sp-change-order {
+      @include m.mq(spWide) {
+        flex-wrap: wrap;
+        gap: inherit;
+      }
+      p:first-of-type {
+        @include m.mq(sp) {
+          min-width: inherit;
+        }
+      }
+      select {
+        @include m.mq(spWide) {
+          display: block;
+          min-width: 20rem;
+        }
+        @include m.mq(sp) {
+          width: 100%;
+          order: 3;
+          max-width: 35rem;
+          padding: 0.3rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+    //テキストエリアスタイリング
+    textarea {
+      padding: 0.3rem;
+      @include m.mq(sp) {
+        width: 100%;
+      }
+    }
+    //ボタン周り追加スタイリング
+    .c-button--bg-gray {
+      font-size: 1.4rem;
+      margin-left: 0.5rem;
+      padding: 0.6rem 0.3rem;
+      border-radius: 0.3rem;
+      letter-spacing: 0.5rem;
+      text-indent: 0.5rem;
+      @include m.mq(spWide) {
+        display: inline-block;
+        margin-left: 1rem;
+      }
+    }
+    .c-button--bg-blue {
+      width: 40rem;
+      padding: 1.4rem 0;
+      border-radius: 1rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      letter-spacing: 2rem;
+      text-indent: 2rem;
+      text-align: center;
+      @include m.mq(sp) {
+        width: 100%;
+      }
+    }
+  }
+
+  //カテゴリー追加更新フォームレイアウト
+  &--cat-add,
+  &--cat-edit {
+    input[type="text"] {
+      min-width: 20rem;
+      padding: 0.3rem;
+      @include m.mq(sp) {
+        width: 100%;
+        min-width: inherit;
+        padding: 0.5rem;
+      }
+    }
+    .c-button--bg-blue,
+    .c-button--bg-gray {
+      min-width: 20rem;
+      border-radius: 0.5rem;
+      vertical-align: middle;
+    }
+    .c-button--bg-blue {
+      letter-spacing: 0.5rem;
+      text-indent: -0.5rem;
+      padding: 0.3rem 0;
+      text-align: center;
+      @include m.mq(sp) {
+        width: 100%;
+        padding: 0.5rem 0;
+      }
+    }
+    .c-button--bg-gray {
+      display: inline-block;
+      text-align: center;
+      letter-spacing: 0.1rem;
+      text-indent: -0.1rem;
+      padding: 0.9rem 0;
+      margin-left: 0.5rem;
+      @include m.mq(sp) {
+        width: 100%;
+        padding: 1.1rem 0;
+        margin-left: 0;
+        margin-top: 0.7rem;
+      }
+    }
+  }
+  //編集ボタン押下JavaScriptイベント用
+  &--cat-add {
+    &.hide {
+      display: none;
+    }
+  }
+  &--cat-edit {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+
+  //アカウント管理
+  &--account {
+    width: 70%;
+    min-width: 50rem;
+    margin: 3rem auto 0;
+    background-color: #eee;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    @include m.mq(sp) {
+      width: 100%;
+      min-width: inherit;
+    }
+    .info {
+      display: flex;
+      align-items: center;
+      margin: 1.8rem 0;
+      @include m.mq(sp) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 2rem 0;
+      }
+      p {
+        font-size: 1.8rem;
+        @include m.mq(sp) {
+          font-size: 1.6rem;
+        }
+        &:first-of-type {
+          min-width: 13rem;
+          @include m.mq(sp) {
+            width: 100%;
+            min-width: inherit;
+            line-height: 1.4;
+          }
+        }
+        &:last-of-type {
+          width: 70%;
+          min-width: 23rem;
+          @include m.mq(sp) {
+            min-width: inherit;
+          }
+        }
+      }
+      .c-button {
+        padding: 0.2rem 1rem;
+        border-radius: 0.5rem;
+        letter-spacing: 0.3rem;
+        text-indent: 0.3rem;
+      }
+    }
+  }
+
+  //アカウント管理編集全画面表示フォーム
+  &--account-edit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    max-width: 45rem;
+    min-width: 40rem;
+    background-color: #eee;
+    border-radius: 1rem;
+    padding: 1.6rem 2.8rem 2rem;
+    @include m.mq(sp) {
+      min-width: inherit;
+      width: 85%;
+      padding: 1.6rem 2rem 2rem;
+    }
+    .p-form__center {
+      width: 90%;
+      margin: 2.4rem auto 1rem;
+      @include m.mq(sp) {
+        width: 100%;
+      }
+      .c-button--bg-blue {
+        width: 60%;
+        margin-left: 2rem;
+        border-radius: 1rem;
+        padding: 1rem 0;
+        @include m.mq(sp) {
+          display: block;
+          margin: 2rem auto 0;
+          width: 80%;
+        }
+      }
+    }
+    .p-form__vertical-input input {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: #fff;
+    }
+  }
+
+  //ユーザー登録フォーム
+  &--join {
+    width: 80%;
+    span {
+      font-size: 1.3rem;
+      margin-left: 0.5rem;
+      &:not(.c-text--red) {
+        @media screen and (max-width: 376px) {
+          display: inline-block;
+        }
+      }
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="number"] {
+      width: 40%;
+      min-width: 20rem;
+      padding: 0.3rem;
+      background-color: #fff;
+      @include m.mq(sp) {
+        width: 90%;
+        padding: 0.5rem 0.3rem;
+      }
+    }
+  }
+
+  //ログインフォーム
+  &--login {
+    width: 80%;
+    margin: 0 auto;
+    span {
+      font-size: 1.4rem;
+      padding-left: 0.5rem;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 40%;
+      min-width: 20rem;
+      padding: 0.3rem;
+      background-color: #fff;
+      @include m.mq(sp) {
+        width: 100%;
+        padding: 0.5rem 0.3rem;
+      }
+    }
+    .c-button {
+      width: 100%;
+      padding: 1rem 0;
+      margin-top: 1.6rem;
+      font-size: 1.6rem;
+      letter-spacing: 0.3rem;
+      text-indent: 0.3rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+  }
+
+  //詳細モーダル追加ボタンフォーム
+  &--calendar-modal {
+    .c-button--bg-blue.add {
+      position: fixed;
+      top: 0;
+      right: 2rem;
+      width: inherit;
+      min-width: inherit;
+      font-size: 2rem;
+      margin-top: 0;
+      padding: 0.5rem 1.6rem;
+      border-radius: 1rem;
+      z-index: 10;
+    }
+  }
+
+  //form直下div=========================
+  //ラベルと入力ボックスが横並びのレイアウト
+  &__flex-input {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    p {
+      min-width: 7.5rem;
+      &.long-name {
+        min-width: 14rem;
+      }
+    }
+  }
+
+  //ラベルと入力ボックスが縦並びのレイアウト
+  &__vertical-input {
+    margin: 1.6rem 0;
+    p:first-of-type {
+      padding-bottom: 0.8rem;
+    }
+  }
+
+  //div内を中央揃えにするレイアウト
+  &__center {
+    text-align: center;
+  }
+
+  //選択項目を入れるdiv
+  &__item-box {
+    display: inline-block;
+    @include m.mq(sp) {
+      display: block;
+      width: 100%;
+      order: 3;
+    }
+  }
+}
