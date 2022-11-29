@@ -11492,8 +11492,9 @@ readers do not read off random characters that represent icons */
   margin: 4rem 0 0;
 }
 .p-section__records-output > h3 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   text-align: center;
+  font-weight: bold;
 }
 .p-section__records-output .p-form {
   padding: 3rem 0 1rem;
@@ -11616,6 +11617,66 @@ readers do not read off random characters that represent icons */
 @media screen and (max-width: 480px) {
   .p-section__back-home .c-button {
     width: 70%;
+  }
+}
+.p-section__report {
+  margin: 10rem 0 0;
+}
+@media screen and (max-width: 900px) {
+  .p-section__report {
+    margin: 3rem 0 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .p-section__report.hide {
+    display: none;
+  }
+}
+.p-section__report h3 {
+  font-size: 2.8rem;
+  text-align: center;
+  font-weight: bold;
+}
+.p-section__report__graph-box {
+  max-width: 110rem;
+  display: none;
+  margin: 7rem auto 0;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7rem;
+}
+@media screen and (max-width: 900px) {
+  .p-section__report__graph-box {
+    flex-direction: column;
+    gap: 4rem;
+    margin: 4rem auto 0;
+  }
+}
+.p-section__report__graph-box.is-active {
+  display: flex;
+}
+.p-section__report__graph-box .plot-container {
+  width: 55%;
+}
+@media screen and (max-width: 900px) {
+  .p-section__report__graph-box .plot-container {
+    width: 100%;
+  }
+}
+.p-section__report__graph-box .plot-container .svg-container {
+  margin: 0 auto;
+}
+.p-section__report__graph-box > p {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .p-section__report__graph-box > p {
+    margin: 2rem 0 0;
+    font-size: 1.8rem;
   }
 }
 

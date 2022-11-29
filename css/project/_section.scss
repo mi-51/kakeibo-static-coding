@@ -204,8 +204,9 @@
   &__records-output {
     margin: 4rem 0 0;
     > h3 {
-      font-size: 2.4rem;
+      font-size: 2.8rem;
       text-align: center;
+      font-weight: bold;
     }
     .p-form {
       padding: 3rem 0 1rem;
@@ -325,6 +326,60 @@
       margin: 0 auto;
       @include m.mq(sp) {
         width: 70%;
+      }
+    }
+  }
+
+  //レポートとグラフsection
+  &__report {
+    margin: 10rem 0 0;
+    @include m.mq(tab) {
+      margin: 3rem 0 0;
+    }
+    &.hide {
+      @include m.mq(tab) {
+        display: none;
+      }
+    }
+    h3 {
+      font-size: 2.8rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    &__graph-box {
+      max-width: 110rem;
+      display: none;
+      margin: 7rem auto 0;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 7rem;
+      @include m.mq(tab) {
+        flex-direction: column;
+        gap: 4rem;
+        margin: 4rem auto 0;
+      }
+      &.is-active {
+        display: flex;
+      }
+      .plot-container {
+        width: 55%;
+        @include m.mq(tab) {
+          width: 100%;
+        }
+        .svg-container {
+          margin: 0 auto;
+        }
+      }
+      > p {
+        display: block;
+        font-size: 2rem;
+        margin-bottom: 5rem;
+        width: 100%;
+        text-align: center;
+        @include m.mq(tab) {
+          margin: 2rem 0 0;
+          font-size: 1.8rem;
+        }
       }
     }
   }
