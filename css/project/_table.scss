@@ -59,6 +59,24 @@
     }
   }
 
+  //レポートグラフ横テーブル
+  &--graph {
+    width: 45%;
+    border-collapse: collapse;
+    @include m.mq(tab) {
+      width: 100%;
+    }
+    th,
+    td {
+      font-size: 1.8rem;
+      line-height: 2;
+      border-bottom: solid 0.2rem #ddd;
+      &:first-of-type {
+        padding-left: 1rem;
+      }
+    }
+  }
+
   //各trスタイリング
   &__join-row {
     line-height: 3.5rem;
@@ -118,7 +136,7 @@
   }
 
   //エクセル出力用非表示テーブル
-  &--hide{
+  &--hide {
     display: none;
   }
 }
