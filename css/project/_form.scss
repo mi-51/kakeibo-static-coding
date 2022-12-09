@@ -391,6 +391,26 @@
     }
   }
 
+  //月別推移フォーム
+  &--bar-graph {
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0 0 2rem 0;
+    select {
+      font-size: 1.6rem;
+      padding: 0.2rem 0.7rem;
+      border: solid 0.1rem #333;
+    }
+    .c-button {
+      font-size: 1.6rem;
+      padding: 0.2rem 1rem;
+      border-radius: 0.5rem;
+      letter-spacing: 0.2rem;
+      text-indent: 0.2rem;
+    }
+  }
+
   //form直下div=========================
   //ラベルと入力ボックスが横並びのレイアウト
   &__flex-input {
