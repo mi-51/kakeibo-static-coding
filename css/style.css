@@ -10747,6 +10747,66 @@ readers do not read off random characters that represent icons */
     transform: translate(0, 0);
   }
 }
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes scroll-finger {
+  0% {
+    opacity: 1;
+    left: 70%;
+  }
+  35% {
+    left: 30%;
+  }
+  50% {
+    left: 70%;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: 30%;
+  }
+}
+@keyframes scroll-finger {
+  0% {
+    opacity: 1;
+    left: 70%;
+  }
+  35% {
+    left: 30%;
+  }
+  50% {
+    left: 70%;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: 30%;
+  }
+}
 .l-header {
   height: 6rem;
   display: flex;
