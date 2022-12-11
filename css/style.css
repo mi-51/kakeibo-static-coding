@@ -11697,6 +11697,21 @@ readers do not read off random characters that represent icons */
     font-size: 1.8rem;
   }
 }
+@media screen and (max-width: 900px) {
+  .p-section__bar-graph {
+    margin-top: 1rem;
+  }
+}
+.p-section__bar-graph .bar-graph {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+@media screen and (max-width: 900px) {
+  .p-section__bar-graph .bar-graph {
+    overflow-x: scroll;
+  }
+}
 
 .p-table {
   font-size: 1.6rem;
