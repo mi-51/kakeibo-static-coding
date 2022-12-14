@@ -53,7 +53,7 @@
           <input type="number" name="amount" id="amount" step="1" maxlength="7" required>
         </div>
 
-        <div class="p-form__flex-input">
+        <div class="p-form__flex-input type">
           <input id="spending" type="radio" name="type" value="0" onchange="onRadioChangeType(0);" required>
           <label for="spending">支出</label>
           <input type="radio" name="type" id="income" value="1" onchange="onRadioChangeType(1);">
