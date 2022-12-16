@@ -10909,6 +10909,16 @@ readers do not read off random characters that represent icons */
 .c-button--bg-lightblue {
   background-color: #def;
 }
+.c-button:disabled {
+  background-color: #bbb;
+  color: #fff;
+  border: solid 0.2rem #bbb;
+}
+.c-button:disabled:hover {
+  background-color: #bbb;
+  color: #fff;
+  border: solid 0.2rem #bbb;
+}
 
 .c-text__subtitle {
   font-size: 1.7rem;
@@ -11266,6 +11276,19 @@ readers do not read off random characters that represent icons */
   width: 100%;
   padding: 0.5rem;
   background-color: #fff;
+}
+.p-form--join p.nickname-check, .p-form--join p.username-check, .p-form--join p.pass-check, .p-form--join p.pass-match-check, .p-form--login p.nickname-check, .p-form--login p.username-check, .p-form--login p.pass-check, .p-form--login p.pass-match-check, .p-form--password-reset p.nickname-check, .p-form--password-reset p.username-check, .p-form--password-reset p.pass-check, .p-form--password-reset p.pass-match-check {
+  padding-top: 0.5rem;
+  font-size: 1.4rem;
+}
+.p-form--join p.nickname-check.short, .p-form--join p.username-check.short, .p-form--join p.pass-check, .p-form--join p.weak, .p-form--join p.mismatch, .p-form--login p.nickname-check.short, .p-form--login p.username-check.short, .p-form--login p.pass-check, .p-form--login p.weak, .p-form--login p.mismatch, .p-form--password-reset p.nickname-check.short, .p-form--password-reset p.username-check.short, .p-form--password-reset p.pass-check, .p-form--password-reset p.weak, .p-form--password-reset p.mismatch {
+  color: #dc3545;
+}
+.p-form--join p.strong, .p-form--join p.match, .p-form--login p.strong, .p-form--login p.match, .p-form--password-reset p.strong, .p-form--password-reset p.match {
+  color: #198754;
+}
+.p-form--join p.normal, .p-form--login p.normal, .p-form--password-reset p.normal {
+  color: #28A7E0;
 }
 .p-form--join {
   width: 80%;

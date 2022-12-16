@@ -109,7 +109,7 @@
         }
       }
     }
-    
+
     //日付入力要素
     &__dateinput {
       width: 100%;
@@ -342,6 +342,35 @@
       width: 100%;
       padding: 0.5rem;
       background-color: #fff;
+    }
+  }
+
+  //ログイン・ユーザー登録・パスワード再設定フォーム共通
+  &--join,
+  &--login,
+  &--password-reset {
+    p {
+      &.nickname-check,
+      &.username-check,
+      &.pass-check,
+      &.pass-match-check {
+        padding-top: 0.5rem;
+        font-size: 1.4rem;
+      }
+      &.nickname-check.short,
+      &.username-check.short,
+      &.pass-check,
+      &.weak,
+      &.mismatch {
+        color: g.$dark-red;
+      }
+      &.strong,
+      &.match {
+        color: g.$dark-green;
+      }
+      &.normal {
+        color: g.$main-blue;
+      }
     }
   }
 

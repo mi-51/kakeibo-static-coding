@@ -33,4 +33,15 @@
   &--bg-lightblue{
     background-color: #def;
   }
+
+  &:disabled{
+    background-color: #bbb;
+    color: #fff;
+    border: solid .2rem #bbb;
+    &:hover{
+      background-color: #bbb;
+      color: #fff;
+      border: solid .2rem #bbb;
+    }
+  }
 }
