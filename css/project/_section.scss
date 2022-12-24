@@ -449,4 +449,48 @@
     max-width: 50rem;
     margin: 4rem auto 0;
   }
+
+  //パスワードリセットリクエスト成功section
+  &__request-success {
+    width: 75rem;
+    margin: 1.6rem auto 0;
+    padding: 4rem 0;
+    background-color: #eee;
+    border-radius: 1rem;
+    text-align: center;
+    @include m.mq(tab) {
+      width: 100%;
+      padding: 3rem 2rem;
+    }
+    p {
+      text-align: center;
+      font-size: 2rem;
+      @include m.mq(tab) {
+        font-size: 1.6rem;
+      }
+      &.caution {
+        font-size: 1.3rem;
+        margin-top: 3rem;
+        line-height: 1.6;
+      }
+    }
+    .c-link {
+      text-decoration: underline;
+      color: g.$main-blue;
+    }
+    .c-button {
+      width: 60%;
+      max-width: 40rem;
+      display: block;
+      margin: 3rem auto 0;
+      text-align: center;
+      padding: 1.4rem 0;
+      font-size: 1.6rem;
+      border-radius: 1rem;
+      letter-spacing: 0.1rem;
+      @include m.mq(sp) {
+        width: 100%;
+      }
+    }
+  }
 }

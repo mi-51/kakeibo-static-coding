@@ -353,15 +353,16 @@
       &.nickname-check,
       &.username-check,
       &.pass-check,
-      &.pass-match-check {
+      &.pass-match-check,
+      &.email-check {
         padding-top: 0.5rem;
         font-size: 1.4rem;
       }
-      &.nickname-check.short,
-      &.username-check.short,
+      &.short,
       &.pass-check,
       &.weak,
-      &.mismatch {
+      &.mismatch,
+      &.incorrect {
         color: g.$dark-red;
       }
       &.strong,
